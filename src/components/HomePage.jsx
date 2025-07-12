@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import Search from "./Search"
 import { Link } from "react-router-dom"
+import 'dotenv/config'
 const HomePage = () => {
 
     const [dataS, setData] = useState([])
     
     useEffect(() => {
-        const apiKey = "4d05546a9ae849c28d065cd9bb27ec66"
+        const apiKey = process.env.APIKEY
         const url = `https://api.spoonacular.com/food/menuItems/search?query=burger&number=50&apiKey=${apiKey}`
         async function getData() {
         const response = await fetch(url);
