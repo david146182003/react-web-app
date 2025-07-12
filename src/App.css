@@ -2,3 +2,10 @@ input{
   
   border: 2px solid black;
 }
+*{
+  background-color:floralwhite;
+}
+
+.item{
+  margin: 10px;
+}

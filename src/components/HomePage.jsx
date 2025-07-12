@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Search from "./Search"
+import { Link } from "react-router-dom"
 const HomePage = () => {
 
     const [dataS, setData] = useState([])
@@ -36,11 +37,12 @@ const HomePage = () => {
 
     return (
         <div>
-            {dataS.id}
-            <Search />
+            <h1>Welcome to Burger station </h1>
+            
+            <Search data={dataS}/>
             <ul>
                 {dataS.map(title =>
-                    <li key={title.id}>{title.title}</li>
+                    <Link to='/restaurant'><li className="item" key={title.id}>{title.title}</li></Link>
                 )}
             </ul>
         </div>
