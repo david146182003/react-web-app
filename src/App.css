@@ -9,3 +9,12 @@ input{
 .item{
   margin: 10px;
 }
+.infoItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemTitle{
+  font-size: large;
+}
